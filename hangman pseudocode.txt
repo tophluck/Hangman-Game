@@ -1,0 +1,22 @@
+pseudo code steps:
+
+set global variables needed
+- word being guessed
+- displayed word
+- array of already guessed characters
+- array of wrong guesses
+- number of guesses left
+- number of wins
+- number of losses
+
+create event listener for keyclicks
+
+check if keyclick is alphabetical (if -> run game code and added to guessed characters, else -> ignore keystroke)
+
+check if it has already been guessed (run loop comparing it to all elements in array of guessed characters. if any match, exit loop and ignore rest of code. if unique, update number of guesses left)
+
+check if it is in the word (run loop checking guessed against each char in word. if -> update _ locations with correct letter locations by using for loop that recreates displayed word based on correctly guessed characters)
+ a) if it was, check if any more letters are left (run loop checking if any _ left in chracters for displayed word or check if word to display matches word to guess. if noen are left -> you win message and updating wins and any html/css updates, including ignoring rest of game code)
+ b) if it was not, update incorrect guesses array by adding keystroke to end of array
+
+check if any guesses are left (if no guesses left, you lose. update variables as needed and exit game code, including restarting game. stuff like updatings wins/losses, reset array of already guessed and wrong guesses, reset number of guesses left, put new word to display, reset displayed word to empty.)
